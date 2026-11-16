@@ -7,6 +7,7 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello(5000);
+    const PORT: number = typeof process.env.PORT === 'number' ? process.env.PORT : 5000; // ajari logic to handle the PORT environment variable correctly
+    return this.appService.getHello(PORT);
   }
 }
