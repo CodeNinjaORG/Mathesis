@@ -1,12 +1,10 @@
-import {sayHelloWorld} from '@mathesis/utils'
+import { Home } from "./components/Home";
+import styles from "./components/Home.module.css";
 
-export default function Home() {
-  
-  const message = sayHelloWorld();
-
+export default function Page() {
   return (
-    <div>
-      <p>{message}</p>
-    </div>
+    <main className={styles.page}>
+      <Home />
+    </main>
   );
 }
